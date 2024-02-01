@@ -7,7 +7,7 @@ import FormularioTarea from "./components/FormularioTarea";
 function App() {
   return (
     <>
-      <Container className="my-4">
+      <Container className="my-4 mainPage">
         <h1 className="text-center">Bienvenido</h1>
         <FormularioTarea />
       </Container>
