@@ -32,7 +32,7 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas />
+      <ListaTareas arrayTareas={tareas}/>
     </section>
   );
 };
