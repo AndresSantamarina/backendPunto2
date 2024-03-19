@@ -1,17 +1,20 @@
-import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Footer from "./components/Footer";
-import FormularioTarea from "./components/FormularioTarea";
+import Inicio from "./components/Inicio";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Rutas from "./components/Rutas";
 
 function App() {
   return (
     <>
-      <Container className="my-4 mainPage">
-        <h1 className="text-center">Bienvenido</h1>
-        <FormularioTarea />
-      </Container>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Inicio />}></Route>
+          <Route exact path="/administrador/*" element={<Rutas />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
