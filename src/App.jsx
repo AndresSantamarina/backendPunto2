@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Inicio from "./components/Inicio";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Rutas from "./components/Rutas";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   return (

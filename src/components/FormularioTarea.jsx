@@ -77,11 +77,22 @@ const FormularioTarea = ({ editar, titulo }) => {
   };
 
   return (
-    <section>
-      <h2>{titulo}</h2>
+    <section className="mainPage">
+      <h2 className="m-5 text-center display-5">{titulo}</h2>
+
       <Form onSubmit={handleSubmit(tareaValidada)}>
-        <Form.Group className="mb-3 d-flex" controlId="formNombreTarea">
+        <div className="text-center my-2">
+        <Form.Text className="text-danger">
+            {errors.nombreTarea?.message}
+          </Form.Text>
+        </div>
+   
+        <Form.Group
+          className="mb-3 d-flex justify-content-center"
+          controlId="formNombreTarea"
+        >
           <Form.Control
+            className="w-50"
             type="text"
             placeholder="Tarea 1..."
             {...register("nombreTarea", {
@@ -96,7 +107,7 @@ const FormularioTarea = ({ editar, titulo }) => {
               },
             })}
           />
-          <Button variant="dark" className="ms-2" type="submit">
+          <Button variant="primary" className="ms-2" type="submit">
             Enviar
           </Button>
         </Form.Group>

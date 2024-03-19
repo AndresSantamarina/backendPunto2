@@ -13,3 +13,12 @@ body {
 .mainPage{
   flex-grow: 1;
 }
+
+@media (max-width: 280px) { 
+  .editar{
+    width: 50px;
+  }
+  .borrar{
+width: 50px;
+  }
+ }

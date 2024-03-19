@@ -2,6 +2,7 @@ import { Button, ListGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { borrarTareaAPI, leerTareasAPI } from "../helpers/queries";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const ItemTarea = ({ tarea, setTareas }) => {
   const borrarTarea = () => {
@@ -37,17 +38,19 @@ const ItemTarea = ({ tarea, setTareas }) => {
   };
 
   return (
-    <ListGroup.Item className="d-flex justify-content-between">
-      {tarea.nombreTarea}
+    <ListGroup.Item className="d-flex justify-content-between align-items-center">
+      <div className="w-50 overflow-hidden">
+        <span className="text-truncate">{tarea.nombreTarea}</span>
+      </div>
       <div>
         <Link
-          className="me-lg-2 btn btn-warning"
+          className="me-lg-2 btn btn-warning m-1 editar"
           to={"/administrador/editar/" + tarea._id}
         >
-          Editar
+          <i className="bi bi-pencil-square"></i>
         </Link>
-        <Button variant="danger" onClick={borrarTarea}>
-          Borrar
+        <Button variant="danger" onClick={borrarTarea} className="m-1 borrar">
+          <i className="bi bi-trash"></i>
         </Button>
       </div>
     </ListGroup.Item>
