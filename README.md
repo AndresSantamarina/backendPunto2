@@ -1,4 +1,4 @@
-# Trabajo Práctico de React - Punto 4
+# Trabajo Práctico de Backend - Punto 2
 
 Este proyecto permite agregar tareas y verlas listadas.
 

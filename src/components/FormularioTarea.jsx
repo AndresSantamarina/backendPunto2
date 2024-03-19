@@ -1,10 +1,24 @@
 import { Button, Form } from "react-bootstrap";
 import ListaTareas from "./ListaTareas";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { leerTareasAPI } from "../helpers/queries";
 
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
-  const [tareas, setTareas] = useState([]);
+  const [tareas, setTareas] = useState([])
+
+  useEffect(()=>{
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async ()=>{
+    try {
+      const respuesta = await leerTareasAPI()
+      setTareas(respuesta)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
