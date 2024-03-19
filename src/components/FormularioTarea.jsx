@@ -17,6 +17,10 @@ const FormularioTarea = () => {
     setTareas(tareasFiltradas);
   };
 
+  const editarTarea = ()=>{
+    
+  }
+
   return (
     <section>
       <Form onSubmit={handleSubmit}>
