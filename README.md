@@ -1,10 +1,11 @@
 # Trabajo Práctico de Backend - Punto 2
 
-Este proyecto permite agregar tareas y verlas listadas.
+Este proyecto permite agregar una tarea, listar todas las tareas existentes, borrar una tarea y editar una tarea.
 
 ## Librerías
 
-[React Bootstrap v 2.9.2](https://react-bootstrap.github.io/)
+- [React Bootstrap v 2.10.0](https://react-bootstrap.github.io/)
+- [Sweet Alert v 11.10.6](https://sweetalert2.github.io/)
 
 ## Autor
 
